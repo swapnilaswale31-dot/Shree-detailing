@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#15364a">
+  <meta name="description" content="Shree Car & Bike Detailing & Washing Center in Nanded. Professional car washing, bike washing, detailing and interior cleaning.">
+  <title>Shree Car & Bike Detailing & Washing Center | Nanded</title>
+  <style>
+    :root {
+      --navy: #15364a;
+      --teal: #168c88;
+      --teal-dark: #107874;
+      --ink: #172b38;
+      --muted: #68777d;
+      --pale: #eef3f4;
+      --line: #e4e9ea;
+      --white: #fff;
+      --shadow: 0 12px 36px rgba(18, 43, 56, .08);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: #f7f9f9; color: var(--ink);
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .page { width: min(100% - 28px, 1080px); margin: 24px auto; }
+    .site-card {
+      overflow: hidden; background: var(--white); border: 1px solid var(--line);
+      border-radius: 30px; box-shadow: var(--shadow);
+    }
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; padding: 26px 30px;
+    }
+    .brand { min-width: 0; }
+    .brand-name {
+      margin: 0; font-size: clamp(1.35rem, 3.2vw, 2.35rem);
+      line-height: 1.1; font-weight: 850; letter-spacing: -.045em;
+      color: var(--navy);
+    }
+    .brand-name span { color: var(--teal); }
+    .tagline { margin: 7px 0 0; color: var(--muted); font-size: .95rem; font-weight: 600; }
+    nav { display: flex; align-items: center; gap: 26px; font-weight: 650; white-space: nowrap; }
+    nav a:hover { color: var(--teal); }
+    .hero { padding: 0 30px; }
+    .hero-image {
+      position: relative; height: clamp(220px, 42vw, 390px); overflow: hidden;
+      border-radius: 18px; background: #101417;
+    }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 58%; }
+    .hero-image::after {
+      content: ""; position: absolute; inset: 35% 0 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.64));
+    }
+    .image-label {
+      position: absolute; z-index: 1; left: 18px; bottom: 16px;
+      color: white; background: rgba(0,0,0,.48); border-radius: 999px;
+      padding: 8px 15px; font-size: .9rem; font-weight: 700;
+    }
+    .profile { text-align: center; padding: 0 30px 38px; }
+    .owner-avatar {
+      width: 150px; height: 150px; margin: 24px auto 16px; border-radius: 50%;
+      border: 4px solid white; outline: 1px solid #dce3e4;
+      display: grid; place-items: center; background: linear-gradient(135deg, #dce8e9, #9db5b9);
+      color: var(--navy); font-size: 2.6rem; font-weight: 850; letter-spacing: -.06em;
+    }
+    .profile h1 {
+      max-width: 760px; margin: 0 auto; color: var(--navy);
+      font-size: clamp(1.8rem, 4.3vw, 3rem); line-height: 1.2; letter-spacing: -.035em;
+    }
+    .owner-line { color: var(--muted); margin: 18px 0 12px; font-size: 1.1rem; }
+    .description { max-width: 760px; margin: 0 auto; color: #3f5057; font-size: clamp(1rem, 2.3vw, 1.35rem); }
+    .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      min-height: 48px; padding: 12px 19px; border-radius: 16px; font-weight: 750;
+      border: 1px solid transparent; transition: transform .18s, background .18s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-soft { background: var(--pale); color: var(--ink); }
+    .btn-primary { background: var(--teal); color: white; }
+    .btn-primary:hover { background: var(--teal-dark); }
+    .section { margin: 0 30px; padding: 36px 0; border-top: 1px solid var(--line); }
+    .section h2 { margin: 0 0 24px; color: var(--navy); font-size: clamp(1.7rem, 3.6vw, 2.35rem); letter-spacing: -.03em; }
+    .services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 22px; }
+    .service { min-width: 0; }
+    .service img {
+      width: 100%; height: clamp(150px, 23vw, 245px); object-fit: cover;
+      border-radius: 15px; background: #e6ebec;
+    }
+    .service h3 { margin: 15px 0 4px; color: #111; font-size: clamp(1.2rem, 2.4vw, 1.55rem); letter-spacing: -.02em; }
+    .service p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+    .contact-panel {
+      margin-top: 30px; padding: 28px; border-radius: 18px; color: white;
+      background: var(--navy); text-align: center;
+    }
+    .contact-panel h2 { margin: 0 auto 10px; max-width: 700px; color: white; }
+    .contact-panel p { margin: 5px 0 16px; color: #dce8ed; font-size: 1.1rem; }
+    .phone { display: inline-block; font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 850; letter-spacing: .02em; }
+    .contact-details {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 20px;
+    }
+    .detail {
+      padding: 17px; border: 1px solid var(--line); border-radius: 14px; background: #fff;
+      overflow-wrap: anywhere;
+    }
+    .detail strong { display: block; margin-bottom: 5px; color: var(--navy); }
+    .detail span { color: var(--muted); }
+    footer { text-align: center; padding: 22px 20px 28px; color: var(--muted); font-size: .9rem; }
+    .menu-toggle { display: none; border: 0; background: var(--pale); color: var(--navy); border-radius: 12px; padding: 10px 13px; font-size: 1.1rem; }
+    @media (max-width: 640px) {
+      .page { width: min(100% - 16px, 1080px); margin: 8px auto; }
+      .site-card { border-radius: 22px; }
+      header { padding: 20px 18px; align-items: flex-start; }
+      .brand-name { font-size: 1.45rem; }
+      .tagline { font-size: .82rem; }
+      .menu-toggle { display: block; flex: 0 0 auto; }
+      nav { display: none; position: absolute; z-index: 5; top: 84px; right: 24px; padding: 16px; flex-direction: column; align-items: flex-start; gap: 14px; border-radius: 14px; background: white; box-shadow: var(--shadow); }
+      nav.open { display: flex; }
+      .hero { padding: 0 14px; }
+      .hero-image { height: 235px; border-radius: 14px; }
+      .profile { padding: 0 17px 30px; }
+      .owner-avatar { width: 122px; height: 122px; font-size: 2.1rem; margin-top: 20px; }
+      .section { margin: 0 17px; padding: 28px 0; }
+      .services { gap: 22px 13px; }
+      .service img { height: 145px; border-radius: 12px; }
+      .service h3 { font-size: 1.1rem; margin-top: 10px; }
+      .service p { font-size: .96rem; }
+      .contact-panel { padding: 23px 16px; }
+      .contact-details { grid-template-columns: 1fr; }
+      .btn { padding: 11px 14px; font-size: .95rem; }
+    }
+    @media (max-width: 390px) {
+      .services { grid-template-columns: 1fr; }
+      .service img { height: 210px; }
+      .actions { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="site-card">
+      <header>
+        <a class="brand" href="#home" aria-label="Shree home">
+          <p class="brand-name">SHREE <span>DETAILING</span></p>
+          <p class="tagline">CAR &amp; BIKE CARE</p>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav id="mainNav" aria-label="Main navigation">
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="home" aria-label="Car and bike detailing">
+        <div class="hero-image">
+          <img src="images6.jpeg" alt="Shiny car ready for detailing" fetchpriority="high">
+          <span class="image-label">SHREE CAR &amp; BIKE CARE</span>
+        </div>
+      </section>
+
+      <section class="profile">
+        <img class="owner-avatar" src="logo.jpg" alt="Shree Detailing Logo">
+        <h1>Shree Car &amp; Bike Detailing &amp; Washing Center</h1>
+        <p class="owner-line">Owned by <strong>Shivkumar Suryakant Anantwar</strong></p>
+        <p class="description">We keep your car and bike clean, polished, and looking their best with professional washing and detailing services.</p>
+        <div class="actions">
+          <a class="btn btn-soft" href="https://www.instagram.com/shree_car_bike_detailing?rpxt=MXA2enFuY21weGc1MA==" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn btn-soft" href="https://www.google.com/maps/place/Shree+Car+%26+Bike+Washing+%26+Deteling+Centor/@19.1920234,77.2841599,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd1d79998876507:0x121bfa62d1068c4d!8m2!3d19.1920234!4d77.2867348!16s%2Fg%2F11p1_zs4yb?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">View Location</a>
+          <a class="btn btn-primary" href=" https://g.page/r/CU2MBtFi-hsSEBM/review" target="_blank" rel="noopener">Review</a>
+          <a class="btn btn-primary" href="tel:+918380886222">Call Now</a>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+          <article class="service">
+            <img src="images1.jpg" alt="Professional car washing" loading="lazy">
+            <h3>Car Washing</h3>
+            <p>A thorough clean for your car.</p>
+          </article>
+          <article class="service">
+            <img src="images2.jpg" alt="Motorcycle care and washing" loading="lazy">
+            <h3>Bike Washing</h3>
+            <p>Careful cleaning for your bike.</p>
+          </article>
+          <article class="service">
+            <img src="images3.jpg" alt="Car paint polishing and detailing" loading="lazy">
+            <h3>Car Detailing</h3>
+            <p>Detailed care for your vehicle's finish.</p>
+          </article>
+          <article class="service">
+            <img src="images4.jpg" alt="Clean car interior" loading="lazy">
+            <h3>Interior Cleaning</h3>
+            <p>Freshen up your car interior.</p>
+          </article>
+          <article class="service">
+            <img src="images5.jpg" alt="Clean car interior" loading="lazy">
+            <h3>Ceramic Coating</h3>
+            <p>Protect and enhance your vehicle's paint.</p>
+          </article>
+        </div>
+
+        <div class="contact-panel" id="contact">
+          <h2>Give Your Vehicle the Care It Deserves</h2>
+          <p>Contact us to enquire about our services.</p>
+          <a class="phone" href="tel:+918380886222">Call: 8380886222</a>
+          <div class="actions">
+            <a class="btn btn-primary" style="background:#fff;color:#15364a" href="https://wa.me/918380886222" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a class="btn btn-soft" href="https://www.google.com/maps/search/?api=1&query=Canal+Road+near+D-Mart+Nanded" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+        <div class="contact-details">
+          <div class="detail"><strong>Owner</strong><span>Shivkumar Suryakant Anantwar</span></div>
+          <div class="detail"><strong>Address</strong><span>Canal Road, near D-Mart, Nanded, Maharashtra</span></div>
+          <div class="detail"><strong>Phone</strong><span><a href="tel:+918380886222">8380886222</a></span></div>
+          <div class="detail"><strong>Services</strong><span>Car washing · Bike washing · Detailing · Interior cleaning</span></div>
+        </div>
+      </section>
+      <footer>© <span id="year"></span> Shree Car &amp; Bike Detailing &amp; Washing Center · Nanded  
+      <br>
+    <span> <h2>powered by Gravity Media Nanded </h2></span>
+  </footer>
+    </div>
+  </main>
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
